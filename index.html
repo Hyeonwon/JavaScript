@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="hello">안녕하세요</h1>
+        <h1 id="hi">초보입니다.</h1>
+        <script>
+            document.getElementById('hello').innerHTML = '안녕';
+            //오른쪽을 왼쪽에 넣어라.
+            //class 등등 다 바꿀 수 있음.
+            document.getElementById('hello').style.color = 'blue';
+            document.getElementById('hi').innerHTML = '변경 -> 고수입니다'
+            document.getElementById('hello').style.fontSize = '16px'
+            document.getElementById('hi').style.fontSize = '16px'
+        </script>
+    </body>
+</html>
