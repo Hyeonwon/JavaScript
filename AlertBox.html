@@ -3,17 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
-        <link rel="stylesheet" href="css/index2.css">
+        <link rel="stylesheet" href="css/AlertBox.css">
     </head>
     <body>
-        <div id="alert" class="alert-box">알림창임
-            <button onclick="document.getElementById('alert').style.display = 'none'">닫기</button>
+        <div class="alert-box">
+            <p id="content">아이디를 입력하세요</p>
+            <button id="close">닫기</button>
         </div>
-        <button onclick="document.getElementById('alert').style.display = 'block'">버튼</button>
+        <button onclick="alertBox('block'), alertContent('아이디를 입력하세요')">아이디</button>
+        <button onclick="alertBox('block'), alertContent('비밀번호를 입력하세요')">비밀번호</button>
 
-    </body>
+        <script>
+            // 중요!
+            // event: 클릭, 키입력, 스크롤, 드래그 등등
+            // event 명을 잘 적는 것이 중요하다.
+            // mouseover: 마우스를 갖다대는 것.
+            // function(): 콜백함수 -> 순차적으로 실행하고 싶을 때, 요구한다.
+            document.getElementById('close').addEventListener('click', function(){
+                document.getElementById('alert').style.display = 'none'
+            })
+
+            function alertBox(x){
+                document.getElementsByClassName('alert-box')[0].style.display = x
+            }
+            function alertContent(x){
+                document.getElementById('content').innerHTML = x
+            }
+        </script>
 </html>
-<!-- 
-1. HTML CSS 로 미리 UI 디자인을 해놓고 필요하면 평소엔 숨김
-
-2. 버튼을 누르거나할 경우 UI를 보여달라고 자바스크립트 코드짬 -->
