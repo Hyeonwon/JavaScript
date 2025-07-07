@@ -20,7 +20,7 @@
             // mouseover: 마우스를 갖다대는 것.
             // function(): 콜백함수 -> 순차적으로 실행하고 싶을 때, 요구한다.
             document.getElementById('close').addEventListener('click', function(){
-                document.getElementById('alert').style.display = 'none'
+                document.getElementsByClassName('alert-box')[0].style.display = 'none'
             })
 
             function alertBox(x){
