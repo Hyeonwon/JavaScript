@@ -1,0 +1,13 @@
+.list-group{
+    visibility: hidden;
+    height: 0px;
+    overflow: hidden;
+    transition: all 1.5s;
+}
+
+.show{
+    /* display: block; */
+    visibility: visible;
+    height: 400px;
+    
+}
